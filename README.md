@@ -8,6 +8,15 @@ Online shop project for statup
 
 ![aglaea](./Aglaea.png)
 
+| feature      | status      |
+| ------------ | ----------- |
+| main ui      | done        |
+| main actions | in progress |
+| categories   | in progress |
+| product ui   | planned     |
+| cart         | planned     |
+| login        | planned     |
+
 #### `yarn start`
 
 Runs the app in the development mode.<br />
