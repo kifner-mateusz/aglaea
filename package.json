@@ -37,5 +37,17 @@
   },
   "devDependencies": {
     "json-server": "^0.15.1"
-  }
+  },
+  "description": "Online shop mockup for statup",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://kifner-mateusz@github.com/kifner-mateusz/aglaea.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kifner-mateusz/aglaea/issues"
+  },
+  "homepage": "https://github.com/kifner-mateusz/aglaea#readme"
 }
