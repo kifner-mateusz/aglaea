@@ -17,7 +17,7 @@
       "count": 1,
       "time": 1572888504
     }],
-    "tags": ["letnie"],
+    "tags": ["lato"],
     "category": "obuwie",
     "subcategory": "buty damskie"
   }, {
@@ -38,7 +38,7 @@
       "count": 1,
       "time": 1572888504
     }],
-    "tags": ["zima"],
+    "tags": ["lato"],
     "category": "obuwie",
     "subcategory": "buty damskie"
   }, {
@@ -59,7 +59,7 @@
       "count": 1,
       "time": 1572888504
     }],
-    "tags": ["zima"],
+    "tags": ["lato"],
     "category": "obuwie",
     "subcategory": "buty damskie"
   }, {
@@ -80,7 +80,7 @@
       "count": 1,
       "time": 1572888504
     }],
-    "tags": ["zima"],
+    "tags": ["lato"],
     "category": "obuwie",
     "subcategory": "buty damskie"
   }, {
@@ -90,7 +90,7 @@
     "img": "assets/img/14.png",
     "seller_id": 2,
     "seller_login": "Marcin",
-    "price": 40.00,
+    "price": 499.99,
     "price_currency": "USD",
     "shipping": 12.50,
     "rating": 4.0,
@@ -101,7 +101,7 @@
       "count": 1,
       "time": 1572888504
     }],
-    "tags": ["zima"],
+    "tags": ["lato"],
     "category": "obuwie",
     "subcategory": "buty damskie"
   }, {
@@ -111,7 +111,7 @@
     "img": "assets/img/01.png",
     "seller_id": 2,
     "seller_login": "Marcin",
-    "price": 40.00,
+    "price": 79.99,
     "price_currency": "USD",
     "shipping": 12.50,
     "rating": 4.0,
@@ -123,8 +123,8 @@
       "time": 1572888504
     }],
     "tags": ["zima"],
-    "category": "obuwie",
-    "subcategory": "buty damskie"
+    "category": "Akcesoria",
+    "subcategory": "Rękawiczki męskie"
   }, {
     "id": 7,
     "title": "Rękawiczki brązowe",
@@ -132,7 +132,7 @@
     "img": "assets/img/09.png",
     "seller_id": 2,
     "seller_login": "Marcin",
-    "price": 40.00,
+    "price": 230.00,
     "price_currency": "USD",
     "shipping": 12.50,
     "rating": 4.0,
@@ -144,16 +144,16 @@
       "time": 1572888504
     }],
     "tags": ["zima"],
-    "category": "obuwie",
-    "subcategory": "buty damskie"
+    "category": "Akcesoria",
+    "subcategory": "Rękawiczki  męskie"
   }, {
     "id": 8,
-    "title": "Buty",
-    "description": "Buty Damskie",
+    "title": "Rękawiczki brązowe",
+    "description": "Rękawiczki",
     "img": "assets/img/08.png",
     "seller_id": 2,
     "seller_login": "Marcin",
-    "price": 40.00,
+    "price": 80.00,
     "price_currency": "USD",
     "shipping": 12.50,
     "rating": 4.0,
@@ -165,8 +165,8 @@
       "time": 1572888504
     }],
     "tags": ["zima"],
-    "category": "obuwie",
-    "subcategory": "buty damskie"
+    "category": "Akcesoria",
+    "subcategory": "Rękawiczki damskie"
   }],
   "users": [{
     "id": 1,
