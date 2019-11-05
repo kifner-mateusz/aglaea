@@ -3,20 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.5.2",
-    "@material-ui/icons": "^4.5.1",
-    "axios": "^0.19.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "json-server": "^0.15.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "start-json-server": "json-server --watch ./json_server/db.json --port 3001 --static ./json_server/static -S ./json_server",
     "start-json-server-slow": "json-server --watch ./json_server/db.json --port 3001 --static ./json_server/static -S ./json_server --delay 1000"
   },
@@ -35,11 +24,10 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "json-server": "^0.15.1"
+  "engines": {
+    "node": "10.x"
   },
   "description": "Online shop mockup for statup",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://kifner-mateusz@github.com/kifner-mateusz/aglaea.git"
