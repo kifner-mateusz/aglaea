@@ -7,11 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-width: 100%;
   min-height: 100%;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+img {
+  max-height: 20rem;
 }
 
 .btn-underline {

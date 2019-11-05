@@ -6,12 +6,13 @@
   height: 70px;
   font-size: 28px;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .search__userInput {
   border: none;
   border-bottom: 3px solid #999;
-  padding: 3px 3px;
+  padding: 3px 9px;
   box-sizing: border-box;
   margin: 9px;
   margin-bottom: -3px;
@@ -27,7 +28,11 @@
   font-size: 0.6em;
 }
 
-.search__icon {
+.search .MuiIconButton-root {
+  margin-bottom: -12px;
+}
+
+/* .search__icon {
   padding: 0;
   margin: 0;
   background: transparent;
@@ -44,4 +49,4 @@
 
 .search__icon:hover {
   fill: #000;
-}
+} */

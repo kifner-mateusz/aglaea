@@ -1,0 +1,62 @@
+.item_card_container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin: 1rem;
+  justify-items: center;
+}
+.item_card_container h4 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  text-align: left;
+  font-weight: normal;
+  font-size: 22px;
+  margin: 0;
+  padding: 12px;
+  justify-self: start;
+}
+
+.item_box_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(1fr);
+  column-gap: 2rem;
+  row-gap: 1rem;
+  margin: 1rem;
+  justify-items: center;
+}
+
+.item_box_container > * {
+  position: relative;
+}
+
+.item_box_container > *:after {
+  content: "";
+  position: absolute;
+  bottom: -1.55rem;
+  left: -1rem;
+  right: -1rem;
+  height: 0.05rem;
+  background: #999;
+}
+
+.item_box_container > h4 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: left;
+  font-weight: normal;
+  font-size: 22px;
+  margin: 0;
+  padding: 12px;
+  justify-self: start;
+}
+
+.item_box_container > h4:after {
+  all: unset;
+}
+
+.item_box_container > *:nth-child(6):after,
+.item_box_container > *:nth-child(7):after {
+  all: unset;
+}
