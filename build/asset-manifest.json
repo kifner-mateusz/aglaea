@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/aglaea/static/css/main.004d1111.chunk.css",
+    "main.css": "/aglaea/static/css/main.f6a9b6a0.chunk.css",
     "main.js": "/aglaea/static/js/main.d86ec15a.chunk.js",
     "main.js.map": "/aglaea/static/js/main.d86ec15a.chunk.js.map",
     "runtime-main.js": "/aglaea/static/js/runtime-main.c163ad33.js",
@@ -8,16 +8,16 @@
     "static/js/2.dc459089.chunk.js": "/aglaea/static/js/2.dc459089.chunk.js",
     "static/js/2.dc459089.chunk.js.map": "/aglaea/static/js/2.dc459089.chunk.js.map",
     "index.html": "/aglaea/index.html",
-    "precache-manifest.c95a70972222f0ffa39e392fd9c3e0ff.js": "/aglaea/precache-manifest.c95a70972222f0ffa39e392fd9c3e0ff.js",
+    "precache-manifest.d5c03b721cc3eb373a9235c14ddefb54.js": "/aglaea/precache-manifest.d5c03b721cc3eb373a9235c14ddefb54.js",
     "service-worker.js": "/aglaea/service-worker.js",
-    "static/css/main.004d1111.chunk.css.map": "/aglaea/static/css/main.004d1111.chunk.css.map",
+    "static/css/main.f6a9b6a0.chunk.css.map": "/aglaea/static/css/main.f6a9b6a0.chunk.css.map",
     "static/media/Montserrat.css": "/aglaea/static/media/Montserrat-Regular.ee653992.ttf",
     "static/media/Ruthie.css": "/aglaea/static/media/Ruthie-Regular.b5fc2523.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.c163ad33.js",
     "static/js/2.dc459089.chunk.js",
-    "static/css/main.004d1111.chunk.css",
+    "static/css/main.f6a9b6a0.chunk.css",
     "static/js/main.d86ec15a.chunk.js"
   ]
 }
