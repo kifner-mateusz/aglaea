@@ -3,7 +3,7 @@
   grid-template-rows: auto 1fr;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
-  margin: 1rem;
+  margin: 4rem 1rem;
   justify-items: center;
 }
 .item_card_container h4 {
@@ -23,7 +23,7 @@
   grid-template-rows: repeat(1fr);
   column-gap: 2rem;
   row-gap: 1rem;
-  margin: 1rem;
+  margin: 4rem 1rem;
   justify-items: center;
 }
 

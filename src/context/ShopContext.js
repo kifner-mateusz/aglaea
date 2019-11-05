@@ -4,7 +4,7 @@ import useHttp from "../hooks/useHttp";
 const ShopContext = React.createContext({
   items: {},
   axiosConfig: {},
-  host: "http://localhost:3001/",
+  host: "http://shop-json-test-api.herokuapp.com/",
   getItems: () => {}
 });
 
@@ -36,7 +36,12 @@ const ShopContextProvider = props => {
 
   return (
     <ShopContext.Provider
-      value={{ items: items, axiosConfig: {}, fetchAllItems }}
+      value={{
+        items: items,
+        axiosConfig: {},
+        fetchAllItems,
+        host: "http://shop-json-test-api.herokuapp.com/"
+      }}
     >
       {props.children}
     </ShopContext.Provider>

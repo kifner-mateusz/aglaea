@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import StarIcon from "@material-ui/icons/Star";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import StarHalfIcon from "@material-ui/icons/StarHalf";
+import { ShopContext } from "../../context/ShopContext";
 
 import "./ItemPreview.css";
-import { string } from "postcss-selector-parser";
 
 const ItemPreview = props => {
+  const shop = useContext(ShopContext);
   let price = props.price - props.sale;
-  let sale_percent = (100.0 - (price / props.price) * 100.0).toFixed(0);
+  let sale_percent = 100 - Math.round((price / props.price) * 100.0);
 
   let rating = [];
   for (let i = 1; i < 6; i++) {
@@ -26,7 +27,7 @@ const ItemPreview = props => {
 
   return (
     <article className={props.class + " item_preview"}>
-      <img src={props.img} alt="" className="img" />
+      {<img src={shop.host + props.img} alt="" className="img" />}
       <h5 className="title">{props.title}</h5>
       <div className="subcategory">{props.subcategory}</div>
       <div className="price">

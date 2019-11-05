@@ -23,6 +23,7 @@
 .item_preview .price {
   grid-area: price;
   font-size: 18px;
+  white-space: nowrap;
 }
 
 .item_preview .price_with_shipping {
@@ -45,6 +46,7 @@
   padding: 0.3rem 0.5rem;
   border-radius: 0.5rem;
   right: 0;
+  border: 0.05rem solid #ccc;
 }
 
 .item_preview .rating {
@@ -120,6 +122,8 @@
   top: 0.5rem;
   right: 0.5rem;
   transform: rotate(15deg);
+  font-size: 18px;
+  box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 /*CARD END*/
@@ -167,6 +171,7 @@
 .item_box .sale {
   top: -0.5rem;
   right: 0rem;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 /*BOX END*/

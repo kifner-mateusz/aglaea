@@ -27,14 +27,14 @@ const Main = props => {
         <>
           <ItemContainer
             items={shop.items.filter((value, index) => {
-              return index < 5;
+              return index < 4 || index == 7;
             })}
             class="item_card"
             title="Polecane"
           />
           <ItemContainer
             items={shop.items.filter((value, index) => {
-              return index < 6;
+              return index > 1 && index < 8;
             })}
             class="item_box"
             title="Nowe"
