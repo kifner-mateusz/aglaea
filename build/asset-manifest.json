@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/aglaea/static/css/main.004d1111.chunk.css",
+    "main.js": "/aglaea/static/js/main.79c02081.chunk.js",
+    "main.js.map": "/aglaea/static/js/main.79c02081.chunk.js.map",
+    "runtime-main.js": "/aglaea/static/js/runtime-main.c163ad33.js",
+    "runtime-main.js.map": "/aglaea/static/js/runtime-main.c163ad33.js.map",
+    "static/js/2.990fe96a.chunk.js": "/aglaea/static/js/2.990fe96a.chunk.js",
+    "static/js/2.990fe96a.chunk.js.map": "/aglaea/static/js/2.990fe96a.chunk.js.map",
+    "index.html": "/aglaea/index.html",
+    "precache-manifest.2ced19b2b950c1bc204199a11907e94e.js": "/aglaea/precache-manifest.2ced19b2b950c1bc204199a11907e94e.js",
+    "service-worker.js": "/aglaea/service-worker.js",
+    "static/css/main.004d1111.chunk.css.map": "/aglaea/static/css/main.004d1111.chunk.css.map",
+    "static/media/Montserrat.css": "/aglaea/static/media/Montserrat-Regular.ee653992.ttf",
+    "static/media/Ruthie.css": "/aglaea/static/media/Ruthie-Regular.b5fc2523.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c163ad33.js",
+    "static/js/2.990fe96a.chunk.js",
+    "static/css/main.004d1111.chunk.css",
+    "static/js/main.79c02081.chunk.js"
+  ]
+}
