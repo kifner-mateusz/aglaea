@@ -4,6 +4,8 @@ Online shop project for statup
 
 ##### fake backend hosted on heroku, may take a while to start
 
+[Design on figma.com](https://www.figma.com/file/ccLaUY374e9law7xswYQqi/Aglaea?node-id=0%3A1)
+
 [>>>>> GitHub Pages Build <<<<<](https://kifner-mateusz.github.io/aglaea/).
 
 ![aglaea](./Aglaea.png)

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useReducer } from "react";
+import React, { useReducer } from "react";
 import useHttp from "../hooks/useHttp";
 
 const ShopContext = React.createContext({
@@ -17,10 +17,12 @@ const shopReducer = (state, action) => {
       return state.push(data);
     case "remove":
       return state.fliter((value, index) => {
-        return value.id != data;
+        return value.id !== parseInt(data);
       });
     case "reset":
       return [];
+    default:
+      return state;
   }
 };
 

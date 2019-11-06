@@ -41,8 +41,8 @@ const ItemPreview = props => {
         <div className="rating">{rating}</div>
       </div>
 
-      {sale_percent != 0 && <div className="sale">-{sale_percent}%</div>}
-      {sale_percent != 0 && (
+      {sale_percent !== 0 && <div className="sale">-{sale_percent}%</div>}
+      {sale_percent !== 0 && (
         <div className="sale_cut">
           {props.price} {props.price_currency}
         </div>

@@ -9,14 +9,16 @@ import "./App.css";
 const App = () => {
   return (
     <div className="App">
-      <ShopContextProvider>
-        <Header />
-        <HashRouter>
-          <Switch>
-            <Route path="/" component={Main} />
-          </Switch>
-        </HashRouter>
-      </ShopContextProvider>
+      <React.StrictMode>
+        <ShopContextProvider>
+          <Header />
+          <HashRouter>
+            <Switch>
+              <Route path="/" component={Main} />
+            </Switch>
+          </HashRouter>
+        </ShopContextProvider>
+      </React.StrictMode>
     </div>
   );
 };

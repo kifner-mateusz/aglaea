@@ -12,13 +12,14 @@ const Main = props => {
 
   useEffect(() => {
     shop.fetchAllItems("products/");
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     console.log(shop);
     if (shop.items !== undefined && shop.items.length > 0) {
     }
-  }, [shop.items]);
+  }, [shop]);
 
   return (
     <div className="main">
@@ -27,7 +28,7 @@ const Main = props => {
         <>
           <ItemContainer
             items={shop.items.filter((value, index) => {
-              return index < 4 || index == 7;
+              return index < 4 || index === 7;
             })}
             class="item_card"
             title="Polecane"
