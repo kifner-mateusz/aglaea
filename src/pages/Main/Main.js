@@ -15,11 +15,11 @@ const Main = props => {
     // eslint-disable-next-line
   }, []);
 
-  useEffect(() => {
-    console.log(shop);
-    if (shop.items !== undefined && shop.items.length > 0) {
-    }
-  }, [shop]);
+  // useEffect(() => {
+  //   console.log(shop);
+  //   if (shop.items !== undefined && shop.items.length > 0) {
+  //   }
+  // }, [shop]);
 
   return (
     <div className="main">
