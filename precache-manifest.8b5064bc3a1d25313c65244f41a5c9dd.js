@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5978338171a385678f6b0aca817006d6",
+    "revision": "5a610b6f2d02468697468324df30d053",
     "url": "/aglaea/index.html"
   },
   {
-    "revision": "6ee254a2a54c41b460bc",
-    "url": "/aglaea/static/css/main.f6a9b6a0.chunk.css"
+    "revision": "d273089b600b74063fd5",
+    "url": "/aglaea/static/css/main.b0c7e763.chunk.css"
   },
   {
-    "revision": "c8b0bb7f6059d6a0b56c",
-    "url": "/aglaea/static/js/2.dc459089.chunk.js"
+    "revision": "4b1b9621ef38c99bdca9",
+    "url": "/aglaea/static/js/2.f6db7e0d.chunk.js"
   },
   {
-    "revision": "6ee254a2a54c41b460bc",
-    "url": "/aglaea/static/js/main.d86ec15a.chunk.js"
+    "revision": "d273089b600b74063fd5",
+    "url": "/aglaea/static/js/main.a1fdc8fa.chunk.js"
   },
   {
     "revision": "d8ce4e1d8e8da61efe2d",
