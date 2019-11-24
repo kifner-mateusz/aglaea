@@ -8,9 +8,9 @@ import StarHalfIcon from '@material-ui/icons/StarHalf';
 
 import { ShopContext } from '../../context/ShopContext';
 
-import './ItemPreview.css';
+import './Item.css';
 
-const ItemPreview = props => {
+const Item = props => {
   const shop = useContext(ShopContext);
   let price = props.price - props.sale;
   let sale_percent = 100 - Math.round((price / props.price) * 100.0);
@@ -28,37 +28,33 @@ const ItemPreview = props => {
     }
   }
 
-  let url = '/product/' + props.id;
-
   return (
-    <NavLink to={url} className="item_preview_link">
-      <article className={props.cssClass + ' item_preview'}>
-        {<img src={shop.host + props.img} alt="" className="img" />}
-        <h5 className="title">{props.title}</h5>
-        <div className="subcategory">{props.subcategory}</div>
-        <div className="price">
-          {price.toFixed(2)} {props.price_currency}
-        </div>
-        <div className="price_with_shipping">
-          {(price + props.shipping).toFixed(2)} {props.price_currency} z dostawą
-        </div>
-        <div className="seller">
-          {props.seller_login}
-          <div className="rating">{rating}</div>
-        </div>
+    <article className={props.cssClass + ' item'}>
+      {<img src={shop.host + props.img} alt="" className="img" />}
+      <h5 className="title">{props.title}</h5>
+      <div className="subcategory">{props.subcategory}</div>
+      <div className="price">
+        {price.toFixed(2)} {props.price_currency}
+      </div>
+      <div className="price_with_shipping">
+        {(price + props.shipping).toFixed(2)} {props.price_currency} z dostawą
+      </div>
+      <div className="seller">
+        {props.seller_login}
+        <div className="rating">{rating}</div>
+      </div>
 
-        {sale_percent !== 0 && <div className="sale">-{sale_percent}%</div>}
-        {sale_percent !== 0 && (
-          <div className="sale_cut">
-            {props.price} {props.price_currency}
-          </div>
-        )}
-      </article>
-    </NavLink>
+      {sale_percent !== 0 && <div className="sale">-{sale_percent}%</div>}
+      {sale_percent !== 0 && (
+        <div className="sale_cut">
+          {props.price} {props.price_currency}
+        </div>
+      )}
+    </article>
   );
 };
 
-ItemPreview.propTypes = {
+Item.propTypes = {
   title: PropTypes.string.isRequired,
   subcategory: PropTypes.string,
   price: PropTypes.number,
@@ -68,4 +64,4 @@ ItemPreview.propTypes = {
   img: PropTypes.string.isRequired
 };
 
-export default ItemPreview;
+export default Item;

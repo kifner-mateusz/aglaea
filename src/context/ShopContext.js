@@ -1,48 +1,135 @@
-import React, { useReducer } from "react";
-import useHttp from "../hooks/useHttp";
+import React, { useReducer, useEffect, useState } from 'react';
+import useHttpQue from '../hooks/useHttpQue';
+import ItemPreview from '../components/ItemPreview/ItemPreview';
+
+const host = 'https://shop-json-test-api.herokuapp.com/';
 
 const ShopContext = React.createContext({
-  items: {},
+  itemsNewIndex: [],
+  itemsFeaturedIndex: [],
+  itemCurrent: undefined,
+  items: [],
+  fetchItems: () => {},
   axiosConfig: {},
-  host: "https://shop-json-test-api.herokuapp.com/",
-  getItems: () => {}
+  host
 });
 
 const shopReducer = (state, action) => {
-  let data = action.data;
   switch (action.type) {
-    case "set":
-      return data;
-    case "add":
-      return state.push(data);
-    case "remove":
+    case 'set':
+      console.log('shop data', action.data);
+      let newState = { ...state };
+      for (let item of action.data) {
+        newState[item.id] = item;
+      }
+      return newState;
+    case 'add':
+      return state.push(action.data);
+    case 'remove':
       return state.fliter((value, index) => {
-        return value.id !== parseInt(data);
+        return value.id !== parseInt(action.data);
       });
-    case "reset":
+    case 'reset':
       return [];
     default:
-      return state;
+      throw new Error('CartContext: action.type unknown');
   }
 };
 
 const ShopContextProvider = props => {
-  const [sendRequest, loading, resData, httpCallback] = useHttp();
-  const [items, itemsReducer] = useReducer(shopReducer, []);
+  const [sendRequest, requests] = useHttpQue(host, {});
 
-  const fetchAllItems = (url, callback) => {
-    sendRequest(url, data => {
-      itemsReducer({ type: "set", data });
+  const [items, itemsDispatch] = useReducer(shopReducer, []);
+
+  const [itemsNewIndex, setItemsNewIndex] = useState([]);
+  const [itemsFeaturedIndex, setItemsFeaturedIndex] = useState([]);
+  const [itemCurrent, setItemCurrent] = useState(undefined);
+
+  useEffect(() => {
+    sendRequest('shop', data => {
+      setItemsFeaturedIndex(data['products-new']);
+      setItemsNewIndex(data['products-featured']);
     });
+  }, []);
+
+  useEffect(() => {
+    // console.log(itemsFeaturedIndex);
+    if (itemsNewIndex.length > 0 && itemsFeaturedIndex.length > 0) {
+      fetchItems(
+        itemsFeaturedIndex.concat(itemsNewIndex).concat([itemCurrent])
+      );
+    }
+  }, [itemsFeaturedIndex, itemsNewIndex]);
+
+  const fetchItems = (arrayOfIds, callback) => {
+    let url =
+      'products?' +
+      arrayOfIds
+        .map((value, index) =>
+          index === 0 ? 'id=' + parseInt(value) : '&id=' + value
+        )
+        .join('');
+    sendRequest(url, data => {
+      itemsDispatch({ type: 'set', data: data });
+    });
+  };
+
+  const fetchItem = (id, callback) => {
+    let url = 'products?id=' + id;
+    sendRequest(url, data => {
+      itemsDispatch({ type: 'set', data: data });
+    });
+  };
+
+  // const getItem = id => {
+  //   if (id in items) {
+  //     return items[id];
+  //   } else {
+  //     fetchItem(id);
+  //     return {};
+  //   }
+  // };
+
+  const getItemsFeatured = count => {
+    // console.log(
+    //   itemsFeaturedIndex.slice(0, count).map(value => {
+    //     return items[value];
+    //   })
+    // );
+    return itemsFeaturedIndex.slice(0, count).map(value => {
+      return items[value];
+    });
+  };
+
+  const getItemsNew = count => {
+    // console.log(
+    //   itemsNewIndex.slice(0, count).map(value => {
+    //     return items[value];
+    //   })
+    // );
+    return itemsNewIndex.slice(0, count).map(value => {
+      return items[value];
+    });
+  };
+
+  const getItemCurrent = () => {
+    return items[itemCurrent];
   };
 
   return (
     <ShopContext.Provider
       value={{
-        items: items,
+        items,
+        itemsFeaturedIndex,
+        itemsNewIndex,
+        fetchItems,
+        getItemCurrent,
+        getItemsFeatured,
+        getItemsNew,
+        setItemCurrent,
+        // getItem,
         axiosConfig: {},
-        fetchAllItems,
-        host: "https://shop-json-test-api.herokuapp.com/"
+        host
       }}
     >
       {props.children}

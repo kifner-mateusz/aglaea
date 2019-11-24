@@ -1,0 +1,27 @@
+/* 
+.item_product {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  grid-template-areas:
+    'img title'
+    'img subcategory'
+    'img shipping'
+    'img seller'
+    'img price'
+    'img sale-cut'
+    'img sale';
+
+  justify-self: stretch;
+  text-align: left;
+  column-gap: 1em;
+  margin: 0rem;
+  padding: 2rem;
+  border-radius: 4px;
+}
+
+.item_product .title {
+  font-size: 1.8rem;
+}
+
+.item_product .sale {
+} */

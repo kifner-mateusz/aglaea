@@ -1,19 +1,18 @@
-import React, { useContext, useEffect } from "react";
-import Search from "../../components/Search/Search";
+import React, { useContext, useEffect } from 'react';
 
-import ItemContainer from "../../containers/ItemContainer/ItemContainer";
+import ItemContainer from '../../containers/ItemContainer/ItemContainer';
 
-import "./Main.css";
-import { ShopContext } from "../../context/ShopContext";
-import Spiner from "../../components/Spiner/Spiner";
+import './Main.css';
+import { ShopContext } from '../../context/ShopContext';
+import Spiner from '../../components/Spiner/Spiner';
 
 const Main = props => {
   const shop = useContext(ShopContext);
 
-  useEffect(() => {
-    shop.fetchAllItems("products/");
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   shop.fetchAllItems('products/')
+  //   // eslint-disable-next-line
+  // }, [])
 
   // useEffect(() => {
   //   console.log(shop);
@@ -22,22 +21,20 @@ const Main = props => {
   // }, [shop]);
 
   return (
-    <div className="main">
-      <Search />
-      {shop.items !== undefined && shop.items.length > 0 ? (
+    <div className="container--1200">
+      {Object.getOwnPropertyNames(shop.items).length > 0 ? (
         <>
           <ItemContainer
-            items={shop.items.filter((value, index) => {
-              return index < 4 || index === 7;
-            })}
-            class="item_card"
+            //shop.items_featured_index.slice(0, 4).map(value => {
+            //   return shop.items[value];
+            //})
+            items={shop.getItemsFeatured(5)}
+            cssClass="item_card"
             title="Polecane"
           />
           <ItemContainer
-            items={shop.items.filter((value, index) => {
-              return index > 1 && index < 8;
-            })}
-            class="item_box"
+            items={shop.getItemsNew(6)}
+            cssClass="item_box"
             title="Nowe"
           />
         </>

@@ -1,186 +1,261 @@
 {
-  "products": [{
-    "id": 1,
-    "title": "Buty",
-    "description": "Buty Damskie",
-    "img": " http://localhost:3001/assets/img/01.png",
-    "seller_id": 2,
-    "seller_login": "Marcin",
-    "price": 1240.00,
-    "price_currency": "USD",
-    "shipping": 12.50,
-    "rating": 4.5,
-    "sale": 0,
-    "in_stock": 1,
-    "lock": [{
-      "user_id": 1,
-      "count": 1,
-      "time": 1572888504
-    }],
-    "tags": ["zima"],
-    "category": "obuwie",
-    "subcategory": "buty damskie"
-  }, {
-    "id": 2,
-    "title": "Buty damskie czarne z kolcami wyasopne",
-    "description": "Buty Damskie",
-    "img": " http://localhost:3001/assets/img/02.png",
-    "seller_id": 2,
-    "seller_login": "Marcin",
-    "price": 40.00,
-    "price_currency": "USD",
-    "shipping": 12.50,
-    "rating": 4.5,
-    "sale": 10,
-    "in_stock": 1,
-    "lock": [{
-      "user_id": 1,
-      "count": 1,
-      "time": 1572888504
-    }],
-    "tags": ["zima"],
-    "category": "obuwie",
-    "subcategory": "buty damskie"
-  }, {
-    "id": 3,
-    "title": "Buty",
-    "description": "Buty Damskie",
-    "img": " http://localhost:3001/assets/img/03.png",
-    "seller_id": 2,
-    "seller_login": "Marcin",
-    "price": 40.00,
-    "price_currency": "USD",
-    "shipping": 12.50,
-    "rating": 4.5,
-    "sale": 20,
-    "in_stock": 1,
-    "lock": [{
-      "user_id": 1,
-      "count": 1,
-      "time": 1572888504
-    }],
-    "tags": ["zima"],
-    "category": "obuwie",
-    "subcategory": "buty damskie"
-  }, {
-    "id": 4,
-    "title": "Buty",
-    "description": "Buty Damskie",
-    "img": " http://localhost:3001/assets/img/05.png",
-    "seller_id": 2,
-    "seller_login": "Marcin",
-    "price": 40.00,
-    "price_currency": "USD",
-    "shipping": 12.50,
-    "rating": 4.0,
-    "sale": 0,
-    "in_stock": 1,
-    "lock": [{
-      "user_id": 1,
-      "count": 1,
-      "time": 1572888504
-    }],
-    "tags": ["zima"],
-    "category": "obuwie",
-    "subcategory": "buty damskie"
-  }, {
-    "id": 5,
-    "title": "Buty",
-    "description": "Buty Damskie",
-    "img": " http://localhost:3001/assets/img/05.png",
-    "seller_id": 2,
-    "seller_login": "Marcin",
-    "price": 40.00,
-    "price_currency": "USD",
-    "shipping": 12.50,
-    "rating": 4.0,
-    "sale": 0,
-    "in_stock": 1,
-    "lock": [{
-      "user_id": 1,
-      "count": 1,
-      "time": 1572888504
-    }],
-    "tags": ["zima"],
-    "category": "obuwie",
-    "subcategory": "buty damskie"
-  }, {
-    "id": 6,
-    "title": "Buty",
-    "description": "Buty Damskie",
-    "img": " http://localhost:3001/assets/img/05.png",
-    "seller_id": 2,
-    "seller_login": "Marcin",
-    "price": 40.00,
-    "price_currency": "USD",
-    "shipping": 12.50,
-    "rating": 4.0,
-    "sale": 0,
-    "in_stock": 1,
-    "lock": [{
-      "user_id": 1,
-      "count": 1,
-      "time": 1572888504
-    }],
-    "tags": ["zima"],
-    "category": "obuwie",
-    "subcategory": "buty damskie"
-  }, {
-    "id": 7,
-    "title": "Buty",
-    "description": "Buty Damskie",
-    "img": " http://localhost:3001/assets/img/05.png",
-    "seller_id": 2,
-    "seller_login": "Marcin",
-    "price": 40.00,
-    "price_currency": "USD",
-    "shipping": 12.50,
-    "rating": 4.0,
-    "sale": 0,
-    "in_stock": 1,
-    "lock": [{
-      "user_id": 1,
-      "count": 1,
-      "time": 1572888504
-    }],
-    "tags": ["zima"],
-    "category": "obuwie",
-    "subcategory": "buty damskie"
-  }, {
-    "id": 8,
-    "title": "Buty",
-    "description": "Buty Damskie",
-    "img": " http://localhost:3001/assets/img/05.png",
-    "seller_id": 2,
-    "seller_login": "Marcin",
-    "price": 40.00,
-    "price_currency": "USD",
-    "shipping": 12.50,
-    "rating": 4.0,
-    "sale": 0,
-    "in_stock": 1,
-    "lock": [{
-      "user_id": 1,
-      "count": 1,
-      "time": 1572888504
-    }],
-    "tags": ["zima"],
-    "category": "obuwie",
-    "subcategory": "buty damskie"
-  }],
-  "users": [{
-    "id": 1,
-    "login": "Ambroży",
-    "cart": [{
-      "product_id": 1,
-      "count": 1
-    }]
-  }, {
-    "id": 2,
-    "login": "Marcin",
-    "cart": [{
-      "product_id": 1,
-      "count": 1
-    }]
-  }]
+  "products": [
+    {
+      "id": 1,
+      "title": "Szpilki różowe",
+      "description": "Buty Damskie",
+      "img": "assets/img/06.png",
+      "seller_id": 2,
+      "seller_login": "Marcin",
+      "price": 200.0,
+      "price_currency": "USD",
+      "shipping": 12.5,
+      "rating": 4.5,
+      "sale": 0,
+      "in_stock": 1,
+      "lock": [
+        {
+          "user_id": 1,
+          "count": 1,
+          "time": 1572888504
+        }
+      ],
+      "tags": ["lato"],
+      "category": "obuwie",
+      "subcategory": "buty damskie"
+    },
+    {
+      "id": 2,
+      "title": "Buty damskie czarne z kolcami",
+      "description": "Buty Damskie",
+      "img": "assets/img/02.png",
+      "seller_id": 2,
+      "seller_login": "Marcin",
+      "price": 40.0,
+      "price_currency": "USD",
+      "shipping": 12.5,
+      "rating": 4.5,
+      "sale": 10,
+      "in_stock": 1,
+      "lock": [
+        {
+          "user_id": 1,
+          "count": 1,
+          "time": 1572888504
+        }
+      ],
+      "tags": ["lato"],
+      "category": "obuwie",
+      "subcategory": "buty damskie"
+    },
+    {
+      "id": 3,
+      "title": "Szpilki niebieskie z kokardą",
+      "description": "Buty Damskie",
+      "img": "assets/img/03.png",
+      "seller_id": 2,
+      "seller_login": "Marcin",
+      "price": 120.0,
+      "price_currency": "USD",
+      "shipping": 12.5,
+      "rating": 4.5,
+      "sale": 20,
+      "in_stock": 1,
+      "lock": [
+        {
+          "user_id": 1,
+          "count": 1,
+          "time": 1572888504
+        }
+      ],
+      "tags": ["lato"],
+      "category": "obuwie",
+      "subcategory": "buty damskie"
+    },
+    {
+      "id": 4,
+      "title": "Szpiki żółte",
+      "description": "Buty Damskie",
+      "img": "assets/img/16.png",
+      "seller_id": 2,
+      "seller_login": "Marcin",
+      "price": 140.0,
+      "price_currency": "USD",
+      "shipping": 12.5,
+      "rating": 4.0,
+      "sale": 0,
+      "in_stock": 1,
+      "lock": [
+        {
+          "user_id": 1,
+          "count": 1,
+          "time": 1572888504
+        }
+      ],
+      "tags": ["lato"],
+      "category": "obuwie",
+      "subcategory": "buty damskie"
+    },
+    {
+      "id": 5,
+      "title": "Szpilki białe",
+      "description": "Buty Damskie",
+      "img": "assets/img/14.png",
+      "seller_id": 2,
+      "seller_login": "Marcin",
+      "price": 499.99,
+      "price_currency": "USD",
+      "shipping": 12.5,
+      "rating": 4.0,
+      "sale": 0,
+      "in_stock": 1,
+      "lock": [
+        {
+          "user_id": 1,
+          "count": 1,
+          "time": 1572888504
+        }
+      ],
+      "tags": ["lato"],
+      "category": "obuwie",
+      "subcategory": "buty damskie"
+    },
+    {
+      "id": 6,
+      "title": "Rękawiczki czarne",
+      "description": "Rękawiczki",
+      "img": "assets/img/01.png",
+      "seller_id": 2,
+      "seller_login": "Marcin",
+      "price": 79.99,
+      "price_currency": "USD",
+      "shipping": 12.5,
+      "rating": 4.0,
+      "sale": 0,
+      "in_stock": 1,
+      "lock": [
+        {
+          "user_id": 1,
+          "count": 1,
+          "time": 1572888504
+        }
+      ],
+      "tags": ["zima"],
+      "category": "Akcesoria",
+      "subcategory": "Rękawiczki męskie"
+    },
+    {
+      "id": 7,
+      "title": "Rękawiczki brązowe",
+      "description": "Rękawiczki",
+      "img": "assets/img/09.png",
+      "seller_id": 2,
+      "seller_login": "Marcin",
+      "price": 230.0,
+      "price_currency": "USD",
+      "shipping": 12.5,
+      "rating": 4.0,
+      "sale": 0,
+      "in_stock": 1,
+      "lock": [
+        {
+          "user_id": 1,
+          "count": 1,
+          "time": 1572888504
+        }
+      ],
+      "tags": ["zima"],
+      "category": "Akcesoria",
+      "subcategory": "Rękawiczki  męskie"
+    },
+    {
+      "id": 8,
+      "title": "Rękawiczki brązowe",
+      "description": "Rękawiczki",
+      "img": "assets/img/08.png",
+      "seller_id": 2,
+      "seller_login": "Marcin",
+      "price": 80.0,
+      "price_currency": "USD",
+      "shipping": 12.5,
+      "rating": 4.0,
+      "sale": 0,
+      "in_stock": 1,
+      "lock": [
+        {
+          "user_id": 1,
+          "count": 1,
+          "time": 1572888504
+        }
+      ],
+      "tags": ["zima"],
+      "category": "Akcesoria",
+      "subcategory": "Rękawiczki damskie"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "login": "Ambroży",
+      "cart": [
+        {
+          "product_id": 1,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "login": "Marcin",
+      "cart": [
+        {
+          "product_id": 1,
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Odzież",
+      "subcategories": [
+        "Suknie",
+        "Bluzy",
+        "Koszule",
+        "Spodnie",
+        "Legginsy",
+        "Swetry"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Obuwie",
+      "subcategories": [
+        "Kozaki",
+        "Buty z futerkiem",
+        "Trapery",
+        "Wizytowe",
+        "Klapki",
+        "Trampki"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Akcesoria",
+      "subcategories": [
+        "Torebki",
+        "Branzoletki",
+        "Kolczyki",
+        "Spinki",
+        "Mankiety",
+        "Muszki",
+        "Krawaty"
+      ]
+    }
+  ],
+  "shop": {
+    "products-new": [1, 2, 3, 6, 5, 4],
+    "products-featured": [7, 6, 5, 4, 3, 2]
+  }
 }

@@ -1,9 +1,24 @@
 .item_preview {
   position: relative;
-  background: #fff;
   /* background: #eee; */
   transition-duration: 50ms;
   transition-timing-function: ease-in;
+  background: #fff;
+}
+
+.item_preview_link,
+.item_preview_link:link,
+.item_preview_link:visited {
+  color: unset;
+  text-decoration: unset;
+  margin: 0;
+  display: contents;
+  padding: 0;
+}
+
+.item_preview_link:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
 }
 
 .item_preview .title {
@@ -14,8 +29,6 @@
 }
 
 .item_preview .img {
-  width: 7rem;
-  height: 7rem;
   object-fit: contain;
   grid-area: img;
 }
@@ -47,11 +60,9 @@
 }
 
 .item_preview .sale {
-  position: absolute;
+  grid-area: sale;
   background: #ffeb3b;
-  padding: 0.3rem 0.5rem;
-  border-radius: 0.2rem;
-  right: 0;
+
   /* border: 0.05rem solid #ccc; */
 }
 
@@ -89,21 +100,18 @@
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
-    "img img"
-    "title title"
-    "subcategory price"
-    "shipping shipping"
-    "tags tags"
-    "seller seller";
-}
-
-.item_preview:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+    'img img'
+    'title title'
+    'subcategory price'
+    'shipping shipping'
+    'tags tags'
+    'seller seller';
 }
 
 .item_card .img {
   justify-self: center;
+  width: 7rem;
+  height: 7rem;
 }
 
 .item_card .title {
@@ -123,10 +131,14 @@
 }
 
 .item_card .sale {
+  position: absolute;
   top: 1.2rem;
   right: 0.7rem;
   transform: rotate(15deg);
   font-size: 18px;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.2rem;
+
   /* box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.2); */
 }
 
@@ -137,10 +149,10 @@
   display: grid;
   grid-template-columns: 7rem auto auto;
   grid-template-areas:
-    "img title title"
-    "img subcategory sale-cut"
-    "img shipping price"
-    "img seller seller";
+    'img title title'
+    'img subcategory sale-cut'
+    'img shipping price'
+    'img seller seller';
   justify-self: stretch;
   text-align: left;
   column-gap: 1em;
@@ -176,6 +188,9 @@
 }
 
 .item_box .sale {
+  position: absolute;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.2rem;
   top: 1rem;
   right: 2rem;
   /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2); */
