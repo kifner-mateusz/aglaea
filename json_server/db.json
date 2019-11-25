@@ -12,7 +12,7 @@
       "shipping": 12.50,
       "rating": 4.5,
       "sale": 0,
-      "in_stock": 1,
+      "in_stock": 5,
       "lock": [{
         "user_id": 1,
         "count": 1,
@@ -33,7 +33,7 @@
       "shipping": 12.50,
       "rating": 4.5,
       "sale": 10,
-      "in_stock": 1,
+      "in_stock": 7,
       "lock": [{
         "user_id": 1,
         "count": 1,
@@ -54,7 +54,7 @@
       "shipping": 12.50,
       "rating": 4.5,
       "sale": 20,
-      "in_stock": 1,
+      "in_stock": 4,
       "lock": [{
         "user_id": 1,
         "count": 1,
@@ -75,7 +75,7 @@
       "shipping": 12.50,
       "rating": 4.0,
       "sale": 0,
-      "in_stock": 1,
+      "in_stock": 9999,
       "lock": [{
         "user_id": 1,
         "count": 1,
@@ -117,7 +117,7 @@
       "shipping": 12.50,
       "rating": 4.0,
       "sale": 0,
-      "in_stock": 1,
+      "in_stock": 10,
       "lock": [{
         "user_id": 1,
         "count": 1,
