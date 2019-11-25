@@ -16,7 +16,7 @@
   padding: 0;
 }
 
-.item_preview_link:hover {
+.item_preview:hover {
   transform: scale(1.02);
   box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
 }
@@ -62,8 +62,6 @@
 .item_preview .sale {
   grid-area: sale;
   background: #ffeb3b;
-
-  /* border: 0.05rem solid #ccc; */
 }
 
 .item_preview .rating {

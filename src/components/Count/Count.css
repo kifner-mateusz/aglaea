@@ -1,0 +1,46 @@
+.count {
+  display: flex;
+  margin: 0;
+  align-items: center;
+}
+
+.count__max {
+  /* width: 60px; */
+  text-align: center;
+  border: none;
+  padding: 5px 9px;
+  /* box-sizing: border-box; */
+  margin: 9px;
+  margin-left: -9px;
+  margin-bottom: -3px;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.count__userInput {
+  /* width: 60px;
+   */
+  text-align: center;
+  border: none;
+  border-bottom: 3px solid #999;
+  padding: 6px 9px;
+  /* box-sizing: border-box; */
+  margin: 6px;
+  margin-bottom: -3px;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.count__userInput:focus {
+  border-bottom-color: black;
+}
+
+.count__userInput--warn {
+  border-bottom-color: #f00;
+}
+
+.count__userInput--warn:focus {
+  border-bottom-color: #f00;
+}

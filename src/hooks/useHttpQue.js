@@ -146,6 +146,7 @@ const useHttpQue = (host, axiosConfig) => {
         dispatchRequest({ type: 'REQUEST_CLEAN', id });
       }
     }
+    // eslint-disable-next-line
   }, [requests]);
 
   return [sendRequest, requests.que];

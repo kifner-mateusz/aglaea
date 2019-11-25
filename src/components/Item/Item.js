@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import React, { useContext, useState, useEffect } from 'react';
 
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
@@ -8,12 +7,19 @@ import StarHalfIcon from '@material-ui/icons/StarHalf';
 
 import { ShopContext } from '../../context/ShopContext';
 
+import Count from '../Count/Count';
+
 import './Item.css';
 
 const Item = props => {
+  const [count, setCount] = useState(1);
   const shop = useContext(ShopContext);
   let price = props.price - props.sale;
   let sale_percent = 100 - Math.round((price / props.price) * 100.0);
+
+  useEffect(() => {
+    console.log(props);
+  }, [count]);
 
   let rating = [];
   for (let i = 1; i < 6; i++) {
@@ -50,6 +56,16 @@ const Item = props => {
           {props.price} {props.price_currency}
         </div>
       )}
+
+      <Count
+        changeCallback={c => {
+          setCount(c);
+        }}
+        minNumber={1}
+        maxNumber={props.in_stock}
+      />
+      <button className="button add_to_cart">Dodaj do koszyka</button>
+      <button className="button buy_now">Kup teraz</button>
     </article>
   );
 };
