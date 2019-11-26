@@ -56,7 +56,9 @@ const ShopContextProvider = props => {
     // console.log(itemsFeaturedIndex);
     if (itemsNewIndex.length > 0 && itemsFeaturedIndex.length > 0) {
       fetchItems(
-        itemsFeaturedIndex.concat(itemsNewIndex).concat([itemCurrent])
+        itemsFeaturedIndex
+          .concat(itemsNewIndex)
+          .concat(typeof itemCurrent === 'undefined' ? [] : [itemCurrent])
       );
     }
   }, [itemsFeaturedIndex, itemsNewIndex]);

@@ -1,22 +1,22 @@
 .item {
   display: grid;
-  grid-template-columns: 7fr 5fr;
+  grid-template-columns: 7fr 0.5fr 4.5fr;
   grid-template-areas:
-    'img title'
-    'img subcategory'
-    'img seller'
-    'img price'
-    'img sale-cut'
-    'img sale'
-    'img count'
-    'img shipping'
-    'img add_to_cart'
-    'img buy_now';
+    'img title title'
+    'img subcategory subcategory'
+    'img seller seller'
+    'img sale sale-cut'
+    'img price price'
+    'img count count'
+    'img shipping shipping'
+    'img add_to_cart add_to_cart'
+    'img  buy_now buy_now';
 
   justify-self: stretch;
   text-align: left;
   column-gap: 1em;
-  margin: 0rem;
+  row-gap: 0.5rem;
+  margin: 4rem 0rem;
   padding: 2rem;
   border-radius: 4px;
   position: relative;
@@ -51,13 +51,14 @@
 
 .item .price_with_shipping {
   grid-area: shipping;
-  font-size: 10px;
+  font-size: 1rem;
+  padding: 0.3rem;
   color: #555;
 }
 
 .item .seller {
   grid-area: seller;
-  font-size: 10px;
+  font-size: 0.8rem;
   color: #555;
 }
 
@@ -69,6 +70,8 @@
   grid-area: sale;
   background: #ffeb3b;
   position: absolute;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.2rem;
 }
 
 .item .rating {
@@ -86,6 +89,7 @@
 .item .sale_cut {
   text-decoration: line-through;
   grid-area: sale-cut;
+  padding: 0.3rem;
   /* text-align: right; */
 }
 
