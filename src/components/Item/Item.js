@@ -64,7 +64,15 @@ const Item = props => {
         minNumber={1}
         maxNumber={props.in_stock}
       />
-      <button className="button add_to_cart">Dodaj do koszyka</button>
+      <button
+        className="button add_to_cart"
+        onClick={() => {
+          console.log(shop);
+          shop.addItemToCart(shop.getItemCurrent(), count);
+        }}
+      >
+        Dodaj do koszyka
+      </button>
       <button className="button buy_now">Kup teraz</button>
     </article>
   );

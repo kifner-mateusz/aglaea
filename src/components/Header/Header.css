@@ -1,5 +1,5 @@
 .site__header__title {
-  font-family: "Ruthie";
+  font-family: 'Ruthie';
   font-weight: normal;
   font-size: 72px;
   margin: 0;
@@ -7,6 +7,12 @@
   top: 5px;
   left: 50%;
   transform: translate(-50%, 0);
+  color: #000;
+}
+
+.site__header__title:link,
+.site__header__title:visited {
+  color: #000;
 }
 
 .site__header {

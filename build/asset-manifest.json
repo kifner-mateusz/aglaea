@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/aglaea/static/css/main.6495f011.chunk.css",
-    "main.js": "/aglaea/static/js/main.e7f2c5d3.chunk.js",
-    "main.js.map": "/aglaea/static/js/main.e7f2c5d3.chunk.js.map",
+    "main.css": "/aglaea/static/css/main.079965d9.chunk.css",
+    "main.js": "/aglaea/static/js/main.b6d540c2.chunk.js",
+    "main.js.map": "/aglaea/static/js/main.b6d540c2.chunk.js.map",
     "runtime-main.js": "/aglaea/static/js/runtime-main.c163ad33.js",
     "runtime-main.js.map": "/aglaea/static/js/runtime-main.c163ad33.js.map",
     "static/js/2.f915c597.chunk.js": "/aglaea/static/js/2.f915c597.chunk.js",
     "static/js/2.f915c597.chunk.js.map": "/aglaea/static/js/2.f915c597.chunk.js.map",
     "index.html": "/aglaea/index.html",
-    "precache-manifest.7500f201e8e69a73dfa34ef0a99daa8b.js": "/aglaea/precache-manifest.7500f201e8e69a73dfa34ef0a99daa8b.js",
+    "precache-manifest.eac55f075e04818c561e665fd663e534.js": "/aglaea/precache-manifest.eac55f075e04818c561e665fd663e534.js",
     "service-worker.js": "/aglaea/service-worker.js",
-    "static/css/main.6495f011.chunk.css.map": "/aglaea/static/css/main.6495f011.chunk.css.map",
+    "static/css/main.079965d9.chunk.css.map": "/aglaea/static/css/main.079965d9.chunk.css.map",
     "static/media/Montserrat.css": "/aglaea/static/media/Montserrat-Regular.ee653992.ttf",
     "static/media/Ruthie.css": "/aglaea/static/media/Ruthie-Regular.b5fc2523.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.c163ad33.js",
     "static/js/2.f915c597.chunk.js",
-    "static/css/main.6495f011.chunk.css",
-    "static/js/main.e7f2c5d3.chunk.js"
+    "static/css/main.079965d9.chunk.css",
+    "static/js/main.b6d540c2.chunk.js"
   ]
 }

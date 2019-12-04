@@ -3,7 +3,7 @@ import Axios from 'axios';
 
 const requestReducer = (state, action) => {
   // console.log('REDUCED', action);
-  let newStateQue = state.que;
+  let newStateQue = { ...state.que };
   switch (action.type) {
     case 'REQUEST_INIT':
       let method;

@@ -1,6 +1,7 @@
 import React, { useReducer, useEffect, useState } from 'react';
 import useHttpQue from '../hooks/useHttpQue';
-import ItemPreview from '../components/ItemPreview/ItemPreview';
+import shopReducer from './reducers/shopReducer';
+import cartReducer from './reducers/cartReducer';
 
 const host = 'https://shop-json-test-api.herokuapp.com/';
 
@@ -8,38 +9,22 @@ const ShopContext = React.createContext({
   itemsNewIndex: [],
   itemsFeaturedIndex: [],
   itemCurrent: undefined,
-  items: [],
+  items: {},
+  cart: {},
   fetchItems: () => {},
   axiosConfig: {},
   host
 });
 
-const shopReducer = (state, action) => {
-  switch (action.type) {
-    case 'set':
-      console.log('shop data', action.data);
-      let newState = { ...state };
-      for (let item of action.data) {
-        newState[item.id] = item;
-      }
-      return newState;
-    case 'add':
-      return state.push(action.data);
-    case 'remove':
-      return state.fliter((value, index) => {
-        return value.id !== parseInt(action.data);
-      });
-    case 'reset':
-      return [];
-    default:
-      throw new Error('CartContext: action.type unknown');
-  }
-};
-
 const ShopContextProvider = props => {
   const [sendRequest, requests] = useHttpQue(host, {});
 
-  const [items, itemsDispatch] = useReducer(shopReducer, []);
+  const [items, itemsDispatch] = useReducer(shopReducer, {});
+  const [cart, cartDispatch] = useReducer(cartReducer, {
+    sellers: {},
+    totalPrice: 0.0,
+    totalPriceCurrency: 'USD'
+  });
 
   const [itemsNewIndex, setItemsNewIndex] = useState([]);
   const [itemsFeaturedIndex, setItemsFeaturedIndex] = useState([]);
@@ -83,32 +68,13 @@ const ShopContextProvider = props => {
     });
   };
 
-  // const getItem = id => {
-  //   if (id in items) {
-  //     return items[id];
-  //   } else {
-  //     fetchItem(id);
-  //     return {};
-  //   }
-  // };
-
   const getItemsFeatured = count => {
-    // console.log(
-    //   itemsFeaturedIndex.slice(0, count).map(value => {
-    //     return items[value];
-    //   })
-    // );
     return itemsFeaturedIndex.slice(0, count).map(value => {
       return items[value];
     });
   };
 
   const getItemsNew = count => {
-    // console.log(
-    //   itemsNewIndex.slice(0, count).map(value => {
-    //     return items[value];
-    //   })
-    // );
     return itemsNewIndex.slice(0, count).map(value => {
       return items[value];
     });
@@ -116,6 +82,14 @@ const ShopContextProvider = props => {
 
   const getItemCurrent = () => {
     return items[itemCurrent];
+  };
+
+  const addItemToCart = (item, count) => {
+    cartDispatch({
+      type: 'addItem',
+      item: item,
+      count
+    });
   };
 
   return (
@@ -129,6 +103,11 @@ const ShopContextProvider = props => {
         getItemsFeatured,
         getItemsNew,
         setItemCurrent,
+        // getCartView,
+        cart,
+        totalPrice: cart.totalPrice,
+        currency: cart.currency,
+        addItemToCart,
         // getItem,
         axiosConfig: {},
         host
